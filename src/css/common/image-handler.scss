@@ -1,0 +1,39 @@
+@import '~@uppy/core/dist/style.css';
+@import '~@uppy/dashboard/dist/style.css';
+@import '~react-image-crop/lib/ReactCrop.scss';
+
+.uppy-Dashboard-inner.mimic {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  background: black;
+
+  .btn-group-rt {
+    position: absolute;
+    right: 1rem; bottom: 1rem;
+    display: inline-flex;
+
+    :not(:last-child) { margin-right: 1rem; }
+  }
+}
+
+.btn {
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  @include shadow;
+  transition: box-shadow 0.05s ease;
+  border-radius: 0.5rem;
+
+  display: flex; justify-content: center; align-items: center;
+
+  &-primary { background: #822; color: white; }
+  &-alt { background: white; color: #822; }
+  &:active { box-shadow: none; }
+}
+
+.btn-group {
+  display: inline-flex;
+  align-self: center;
+  margin: 2rem auto 0;
+
+  .btn { margin: 0 0.5rem; }
+}

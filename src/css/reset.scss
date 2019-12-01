@@ -1,0 +1,30 @@
+html, body { min-width: 100%; min-height: 100%; margin: 0; font-family: montserrat, arial, sans-serif; }
+html, body, #root, #app-wrapper, nav { display: flex; flex-direction: column; flex: 1; }
+#root { flex-direction: row; }
+#app-wrapper { flex: 4; overflow: hidden; }
+:not(.scrollable)::-webkit-scrollbar { width: 0 !important; }
+
+.hidden { display: none; }
+@mixin shadow { box-shadow: 0 1rem 2rem 0.5rem rgba(0,0,0,0.14); }
+
+.lock-aspect {
+  width: 100%;
+  height: 0;
+  position: relative;
+
+  &-16x9 { padding-top: 56.25%; }
+  &-1x1 { padding-top: 100%; }
+
+  img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+  .cover {
+    position: absolute; inset: 0;
+    display: flex; justify-content: center; align-items: center;
+    width: 100%; height: 100%;
+    background: #eee; cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 2rem;
+
+    &:hover { background: #ddd; font-size: 2.5rem; }
+  }
+}

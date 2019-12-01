@@ -1,0 +1,25 @@
+.orders {
+  .fulfilled-true { color: #282; }
+  .fulfilled-false { color: #822; }
+
+  .collapsible {
+    align-items: flex-start;
+
+    .summary {
+      > div {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        background: #eee;
+        border: medium solid gray;
+      }
+
+      div { margin-left: 2rem; }
+
+      .fulfilled {
+        cursor: pointer;
+        display: flex; flex-direction: row; align-items: center;
+        input { margin: 0 0 0 0.5rem; cursor: pointer; }
+      }
+    }
+  }
+}

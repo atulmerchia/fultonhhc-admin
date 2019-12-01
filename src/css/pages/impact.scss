@@ -1,0 +1,32 @@
+.impact {
+  flex: 1;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: flex-start;
+
+    .btn {
+      padding: 0.25rem; margin: 0.125rem 1rem; 
+      display: flex; align-items: center; align-self: flex-start; }
+
+    .dropdown { flex: 1; border-right: thin solid gray; }
+  }
+
+  .editor {
+    flex: 1;
+    margin: 2rem;
+    display: flex; flex-direction: column;
+
+    h2 { margin: 0; }
+    hr {
+      width: 100%; margin: 2rem 0;
+      border-color: #822;
+      box-shadow: 0 0 0.15rem #822;
+      &:first-of-type { margin-top: 1rem; }
+    }
+  }
+
+  @include mobile { .btn-group { flex-direction: column; .btn { margin-top: 1rem; }} }
+}

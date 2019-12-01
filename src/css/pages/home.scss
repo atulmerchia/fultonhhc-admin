@@ -1,0 +1,13 @@
+.home {
+  flex: 1;
+  margin: 2rem;
+  display: flex; flex-direction: column;
+
+  h2 { margin: 0; }
+  form > hr {
+    width: 100%; margin: 2rem 0;
+    border-color: #822;
+    box-shadow: 0 0 0.15rem #822;
+    &:first-of-type { margin-top: 1rem; }
+  }
+}

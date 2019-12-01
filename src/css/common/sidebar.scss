@@ -1,0 +1,43 @@
+.sidebar {
+  @include shadow;
+  background: #eee;
+  transition: flex 0.4s ease;
+  border-right: 1px solid #666;
+  
+  &.open-false { flex: 0; .tab { padding-right: 0; .text { width: 0; }} }
+  &.open-true .header span { transform: rotate(90deg); }
+
+  .header {
+    display: flex; flex-direction: row; align-items: center;
+    font-size: 1.5rem; font-weight: bold;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    justify-content: flex-end;
+    background: #bbb;
+    border-bottom: thin solid #666;
+
+    span {
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .tab {
+    transition: padding-right 0.4s ease;
+    color: black; text-decoration: none;
+    display: flex; flex-direction: row; align-items: center;
+    font-size: 1.5rem; font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-bottom: thin solid #666;
+    overflow: hidden;
+    &:hover, &.active { background: #822; color: white; }
+    &:hover:not(.active) { opacity: 0.6; @include shadow; }
+
+    .text { width: 8rem; overflow: hidden; transition: width 0.4s ease; }
+    .icon { padding-right: 1rem; }
+  }
+}
+
+@include mobile {
+  .sidebar.open-true + #app-wrapper { flex: 0; overflow: hidden; }
+  .sidebar + #app-wrapper { transition: flex 0.4s ease; }
+}

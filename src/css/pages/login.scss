@@ -1,0 +1,37 @@
+.login {
+  flex: 1; display: flex; justify-content: center; align-items: center;
+  background: #822;
+  flex-direction: column;
+  h1, h2 { color: white; text-align: center; margin: 1rem auto 0; }
+
+  img { max-width: 50%; width: 15rem; }
+
+  form {
+    width: calc(90% - 2rem);
+    max-width: 30rem;
+  }
+  .form { @include shadow; }
+  .form, .submit {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    padding: 1rem;
+    background: white;
+  }
+
+  .submit {
+    font-size: 1.5rem;
+    font-weight: bold;
+    outline: none;
+
+    transition: all 0.2s ease;
+
+    &:not(.disabled) {
+      cursor: pointer;
+      &:hover, &:focus { background: #DFD; }
+      &:active { box-shadow: none; opacity: 0.4; }
+    }
+  }
+
+  .err-false { color: #282; text-align: center; }
+  .err-true { color: red; text-align: center; }
+}

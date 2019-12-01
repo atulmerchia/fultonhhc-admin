@@ -1,0 +1,25 @@
+.partners {
+  .top { display: flex; flex-direction: row; form { flex: 1; }}
+  .img-handler { width: 15rem !important; margin: 0 auto !important; }
+  .reorderable-list { min-height: fit-content; >  :first-child{ margin-top: 1rem; }}
+  .collapsible {
+    &-open { background: #eee; }
+
+    hr {
+      width: 100%; margin: 1rem 0;
+      border-color: #822;
+      box-shadow: 0 0 0.15rem #822;
+    }
+
+    .btn-group { margin-top: 1rem; }
+
+    .top { margin-top: 1rem; }
+
+    > .btn {
+      margin-top: 1rem;
+      padding: 0.25rem 0.5rem;
+
+      &-alt { margin-bottom: 1rem; }
+    }
+  }
+}

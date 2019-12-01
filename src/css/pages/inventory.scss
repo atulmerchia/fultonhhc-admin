@@ -1,0 +1,36 @@
+.inventory, .orders, .partners {
+  margin: 1rem 2rem;
+  > .btn { width: 10rem; margin: 0.5rem auto; }
+
+  .collapsible {
+    display: flex; align-items: center; flex-direction: column;
+    &:not(.collapsible-open) { max-height: 1.25rem !important };
+    max-height: 0;
+    transition: all 0.4s ease;
+    padding-bottom: 0;
+    overflow: hidden;
+    &-open {
+      overflow-x: scroll;
+      padding-bottom: 1rem;
+    }
+
+    .header {
+      cursor: pointer;
+      height: 1.25rem;
+      &:hover { background: #eee; }
+      align-self: stretch;
+      display: flex; flex-direction: row; justify-content: space-between;
+      .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .price { margin-left: 1rem; }
+    }
+    .img-handler { width: 10rem; margin: 1.5rem auto 0; cursor: pointer; }
+    .btn-group {
+      margin: 2rem auto 1rem;
+      @include mobile { flex-direction: column; .btn { margin-top: 1rem; } }
+    }
+    .cover {
+      opacity: 0; background: black; color: white; text-align: center;
+      &:hover { opacity: 0.8; }
+    }
+  }
+}
