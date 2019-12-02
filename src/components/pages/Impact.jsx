@@ -2,7 +2,7 @@ import React from 'react'
 import API from 'lib/api'
 import { ImageTrigger, Loading, Reorderable, RichEditor } from 'components/common'
 import { Dropdown, Form, Input, Submit } from 'components/forms'
-import Icon from '@material-ui/core/icon'
+import Icon from '@material-ui/core/Icon'
 
 export default class Impact extends React.Component {
   constructor (props) {
